@@ -9,7 +9,7 @@ export default () => {
   } = useContext(LocationContext);
 
   const saveTrack = () => {
-    createTrack(name, locations);
+    createTrack(name, locations.length);
   };
 
   return [saveTrack];
