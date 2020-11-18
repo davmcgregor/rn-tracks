@@ -9,9 +9,8 @@ const TrackForm = () => {
     state: { name, recording, locations },
     startRecording,
     stopRecording,
-    changeName,
+    changeName
   } = useContext(LocationContext);
-
   const [saveTrack] = useSaveTrack();
 
   return (
@@ -20,19 +19,19 @@ const TrackForm = () => {
         <Input
           value={name}
           onChangeText={changeName}
-          placeholder='Enter name'
+          placeholder="Enter name"
         />
       </Spacer>
       <Spacer>
         {recording ? (
-          <Button title='Stop' onPress={stopRecording} />
+          <Button title="Stop" onPress={stopRecording} />
         ) : (
-          <Button title='Start Recording' onPress={startRecording} />
+          <Button title="Start Recording" onPress={startRecording} />
         )}
       </Spacer>
       <Spacer>
         {!recording && locations.length ? (
-          <Button title='Save Recording' onPress={saveTrack} />
+          <Button title="Save Recording" onPress={saveTrack} />
         ) : null}
       </Spacer>
     </>
